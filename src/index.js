@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDom from 'react-dom';
+import Main from './Components/Main';
 
 // const element = React.createElement('p', null, 'This is the heading');
 
@@ -7,14 +8,14 @@ import ReactDom from 'react-dom';
 //     tasks.map((task, index) => React.createElement('li', {key: index}, task))
 // );
 
-const tasks = ['bob', 'mark', 'steve'];
+// const element = (
+//     <div>
+//         <h1>Task List</h1>
+//         <ol>
+//             {tasks.map((task, index) => <li key={index}>{task}</li>)}
+//         </ol>
+//     </div>);
 
-const element = (
-    <div>
-        <h1>Task List</h1>
-        <ol>
-            {tasks.map((task, index) => <li key={index}>{task}</li>)}
-        </ol>
-    </div>);
+// const tasks = ['bob', 'mark', 'steve'];
 
-ReactDom.render(element, document.getElementById('root'));
+ReactDom.render(<Main/>, document.getElementById('root'));
