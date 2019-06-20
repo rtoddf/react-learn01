@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDom from 'react-dom';
 import Main from './Components/Main';
+import './css/styles.css';
 
 // const element = React.createElement('p', null, 'This is the heading');
 
