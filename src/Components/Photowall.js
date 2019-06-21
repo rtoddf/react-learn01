@@ -1,12 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Photo from './Photo';
 
-class Photowall extends Component {
-    render() {
-        return <div class="photogrid">
-            {this.props.posts.map((post, index) => <Photo index={index} post={post}/>)}
-        </div>
-    }
+// import React, {Component} from 'react';
+
+function Photowall(props) {
+    return <div className="photogrid">
+        {props.posts.map((post, index) => <Photo key={index} post={post}/>)}
+    </div>
 }
+
+// class Photowall extends Component {
+//     render() {
+//         return <div className="photogrid">
+//             {this.props.posts.map((post, index) => <Photo key={index} post={post}/>)}
+//         </div>
+//     }
+// }
 
 export default Photowall;
