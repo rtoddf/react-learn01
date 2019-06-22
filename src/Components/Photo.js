@@ -1,4 +1,5 @@
 import React from 'react';
+import { METHODS } from 'http';
 
 function Photo(props) {
     const post = props.post;
@@ -10,6 +11,8 @@ function Photo(props) {
         </div>
     </figure>
 }
+
+// if all your component has is a render METHOD, you can use a function
 
 // class Photo extends Component {
 //     render(){
