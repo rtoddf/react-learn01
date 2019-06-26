@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Title from './Title';
 import Photowall from './Photowall';
 
@@ -21,20 +21,20 @@ const posts = [{
     imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
     }]
 
-function Main() {
-    return  <div>
-                <Title title={tasksTitle}/>
-                <Photowall posts={posts}/>
-            </div>
-}
-
-    // class Main extends Component {
-    // render() {
-    //     return  <div>
-    //                 <Title title={tasksTitle}/>
-    //                 <Photowall posts={posts}/>
-    //             </div>
-    // }
+// function Main() {
+//     return  <div>
+//                 <Title title={tasksTitle}/>
+//                 <Photowall posts={posts}/>
+//             </div>
 // }
+
+class Main extends Component {
+    render() {
+        return  <div>
+                    <Title title={tasksTitle}/>
+                    <Photowall posts={posts}/>
+                </div>
+    }
+}
 
 export default Main;
