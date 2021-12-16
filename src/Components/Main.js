@@ -2,38 +2,36 @@ import React, {Component} from 'react';
 import Title from './Title';
 import Photowall from './Photowall';
 
-// import React, {Component} from 'react';
+import antoni from '../images/antoni.jpg';
+import timothe from '../images/timothe.jpg';
+import tommy from '../images/tommy.jpg';
+import travis from '../images/travis.jpg';
 
 const tasksTitle = 'Photo Wall';
-
-// function Main() {
-//     return  <div>
-//                 <Title title={tasksTitle}/>
-//                 <Photowall posts={posts}/>
-//             </div>
-// }
 
 class Main extends Component {
     constructor() {
         super();
         this.state = {
-            posts: [{
-                id: "0",
-                description: "Timothee Chalamet",
-                imageLink: "http://www.rtodd.net/images/personality-timothee-chalamet.jpg"
+            posts: [
+                {
+                    id: "0",
+                    description: "Timothee Chalamet",
+                    imageLink: timothe
                 }, {
-                id: "1",
-                description: "Tommy Dorfman",
-                imageLink: "http://www.rtodd.net/images/personality-tommy-dorfman.jpg"
+                    id: "1",
+                    description: "Tommy Dorfman",
+                    imageLink: tommy
                 }, {
-                id: "2",
-                description: "Travis Wall",
-                imageLink: "http://www.rtodd.net/images/personality-travis-wall.jpg"
+                    id: "2",
+                    description: "Travis Wall",
+                    imageLink: travis
                 }, {
-                id: "3",
-                description: "Antoni Porowski",
-                imageLink: "http://www.rtodd.net/images/personality-antoni-porowski.jpg"
-                }]
+                    id: "3",
+                    description: "Antoni Porowski",
+                    imageLink: antoni
+                }
+            ]
         }
         this.removePhoto = this.removePhoto.bind(this);
     }
@@ -48,9 +46,9 @@ class Main extends Component {
 
     render() {
         return  <div>
-                    <Title title={tasksTitle}/>
-                    <Photowall posts={this.state.posts} onRemovePhoto={this.removePhoto}/>
-                </div>
+                <Title title={tasksTitle}/>
+                <Photowall posts={this.state.posts} onRemovePhoto={this.removePhoto}/>
+            </div>
     }
 }
 
